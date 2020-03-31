@@ -1,0 +1,10 @@
+{
+  "name": "node-todo",
+  "version": "0.0.1",
+  "main": "cli.js",
+  "repository": "https://github.com/guo-jing/node-todo.git",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^5.0.0"
+  }
+}
