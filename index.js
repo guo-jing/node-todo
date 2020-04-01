@@ -1,10 +1,9 @@
-const fs = require('fs');
-const homedir = process.env.HOME || require('os').homedir();
+const db = require('./db.js');
 
-module.exports = add;
+module.exports.add = add;
 function add(task) {
     // 读取文件
-    fs.open('')
+    db.read();
     // 插入任务
     // 保存任务
 }
