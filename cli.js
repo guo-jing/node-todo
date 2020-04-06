@@ -15,5 +15,5 @@ if (process.argv[2] === 'add') {
 }
 
 if (process.argv[2] === 'showAll') {
-    api.showAll().then(() => {}, () => {});
+    void api.showAll();
 }

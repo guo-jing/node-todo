@@ -14,7 +14,7 @@ function read() {
             } catch (e) {
                 list = [];
             }
-            reject(list);
+            resolve(list);
         })
     });
 }
