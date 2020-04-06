@@ -1,7 +1,13 @@
 {
-  "name": "node-todo",
+  "name": "cli-todo",
+  "bin": {
+    "td": "cli.js"
+  },
+  "files": [
+    "*.js"
+  ],
   "version": "0.0.1",
-  "main": "cli.js",
+  "main": "index.js",
   "repository": "https://github.com/guo-jing/node-todo.git",
   "license": "MIT",
   "dependencies": {
