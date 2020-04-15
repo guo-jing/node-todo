@@ -1,5 +1,6 @@
 const db = require('./db.js');
 const inquirer = require('inquirer');
+const clipboardy = require('clipboardy');
 
 module.exports.add = add;
 async function add(task) {
@@ -130,4 +131,13 @@ function removeTask(list, taskIndex) {
 module.exports.clear = clear;
 function clear() {
     return db.write([]);
+}
+
+module.exports.copy = copy;
+async function copy() {
+    const list = await db.read();
+    const copyString = list.map((current) => {
+        return `[${current.finished ? '√' : ' '}]${current.title}`;
+    }).join('\n');
+    clipboardy.writeSync(copyString);
 }

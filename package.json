@@ -11,6 +11,7 @@
   "repository": "https://github.com/guo-jing/node-todo.git",
   "license": "MIT",
   "dependencies": {
+    "clipboardy": "^2.3.0",
     "commander": "^5.0.0",
     "global": "^4.4.0",
     "inquirer": "^7.1.0",

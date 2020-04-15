@@ -28,3 +28,7 @@ if (process.argv[2] === 'showAll') {
 if (process.argv[2] === 'clear') {
     api.clear().then(() => console.log('清除成功'));
 }
+
+if (process.argv[2] === 'copy') {
+    api.copy().then(() => console.log('已复制'));
+}
