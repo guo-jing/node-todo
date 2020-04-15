@@ -8,13 +8,23 @@ program
 
 program.parse(process.argv);
 if (process.argv[2] === 'add') {
+    let taskName;
     if (!process.argv[3]) {
         console.log('请输入任务名称');
         return;
     }
-    api.add(process.argv[3]).then(() => console.log('保存成功'), (error) => console.log(error));
+    if(process.argv[4]) {
+        taskName = process.argv.slice(3).join(' ');
+    } else {
+        taskName = process.argv[3];
+    }
+    api.add(taskName).then(() => console.log('保存成功'), (error) => console.log(error));
 }
 
 if (process.argv[2] === 'showAll') {
     void api.showAll();
+}
+
+if (process.argv[2] === 'clear') {
+    api.clear().then(() => console.log('清除成功'));
 }

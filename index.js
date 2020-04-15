@@ -126,3 +126,8 @@ function removeTask(list, taskIndex) {
     list.splice(taskIndex, 1);
     void db.write(list);
 }
+
+module.exports.clear = clear;
+function clear() {
+    return db.write([]);
+}
